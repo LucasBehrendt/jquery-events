@@ -1,25 +1,19 @@
-$(document).ready(function() {
-    $("#stream1_btn").hover(function() {
-        $(".stream1").removeClass('highlight_stream');
-        $(".stream2").removeClass('highlight_stream');
-        $(".stream3").removeClass('highlight_stream');
-        $(".stream1").addClass('highlight_stream');
-   }, function() {
-    // $(".stream1").addClass('highlight_stream');
-    // $(".stream2").addClass('highlight_stream');
-    // $(".stream3").addClass('highlight_stream');
-    $(".stream1").removeClass('highlight_stream');
+$(document).ready(function () {
+
+     $("#stream1_btn").on("click", function () {
+          $(".stream1").fadeTo(1000, 0.5);
+          // $(".stream1").slideToggle(2000);
+     });
+     $("#stream2_btn").on("click", function () {
+          $(".stream1").removeClass('highlight_stream');
+          $(".stream2").removeClass('highlight_stream');
+          $(".stream3").removeClass('highlight_stream');
+          $(".stream2").addClass('highlight_stream');
+     });
+     $("#stream3_btn").on("click", function () {
+          $(".stream1").removeClass('highlight_stream');
+          $(".stream2").removeClass('highlight_stream');
+          $(".stream3").removeClass('highlight_stream');
+          $(".stream3").addClass('highlight_stream');
+     });
 });
-   $("#stream2_btn").on("click", function() {
-        $(".stream1").removeClass('highlight_stream');
-        $(".stream2").removeClass('highlight_stream');
-        $(".stream3").removeClass('highlight_stream');
-        $(".stream2").addClass('highlight_stream');
-   });
-   $("#stream3_btn").on("click", function() {
-        $(".stream1").removeClass('highlight_stream');
-        $(".stream2").removeClass('highlight_stream');
-        $(".stream3").removeClass('highlight_stream');
-        $(".stream3").addClass('highlight_stream');
-   });
-}); 
